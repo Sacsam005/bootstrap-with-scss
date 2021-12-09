@@ -1,0 +1,27 @@
+@media screen and (max-width: 576px) {
+  button.navbar-toggler {
+    color: white;
+  }
+  .navbar-toggler-icon {
+    color: white;
+  }
+  .container {
+    width: 100%;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+  }
+
+  section.carousel-section {
+    width: 100%;
+    height: auto;
+  }
+
+  section.carousel-section h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=media.css.map */

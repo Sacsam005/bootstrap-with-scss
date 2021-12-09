@@ -1,0 +1,76 @@
+// variables
+
+@import "variable";
+@import "mixins";
+@import "media";
+
+* {
+  margin: 0 auto;
+}
+nav.navbar {
+  font-family: $mainFont;
+  background-color: $mainColor;
+  margin: $mainMargin;
+  padding: $mainPadding;
+
+  ul li {
+    margin: 0rem 2rem;
+  }
+
+  a {
+    color: $fontColor;
+    font-size: $fontSize;
+    margin: $mainMargin;
+
+    &:hover {
+      color: orange;
+    }
+  }
+
+  .dropdown-menu a {
+    color: $mainColor;
+    margin: $mainMargin;
+
+    &:hover {
+      color: orange;
+    }
+  }
+}
+
+section.carousel-section {
+  width: 100%;
+  height: auto;
+
+  .wrapper {
+    background: transparent !important;
+  }
+
+  h1 {
+    font-size: $mainHeading;
+  }
+
+  .carousel-item {
+    margin-top: -5rem;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  @extend %alignment;
+
+  .row {
+    @include box-shadow(3px, 3px, 0, black);
+    @extend %alignment;
+  }
+
+  .col {
+    @include box-shadow(5px, 5px, 0, black);
+    @extend %alignment;
+  }
+}
+
+.box {
+  @include border(1rem);
+}

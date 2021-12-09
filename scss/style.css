@@ -1,0 +1,99 @@
+.container, .container .row, .container .col {
+  margin: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  button.navbar-toggler {
+    color: white;
+  }
+  .navbar-toggler-icon {
+    color: white;
+  }
+  .container {
+    width: 100%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    margin: 0 auto;
+  }
+}
+
+* {
+  margin: 0 auto;
+}
+
+nav.navbar {
+  font-family: Arial;
+  background-color: black;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+nav.navbar ul li {
+  margin: 0rem 2rem;
+}
+
+nav.navbar a {
+  color: white;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+nav.navbar a:hover {
+  color: orange;
+}
+
+nav.navbar .dropdown-menu a {
+  color: black;
+  margin: 0 auto;
+}
+
+nav.navbar .dropdown-menu a:hover {
+  color: orange;
+}
+
+section.carousel-section {
+  width: 100%;
+  height: auto;
+}
+
+section.carousel-section .wrapper {
+  background: transparent !important;
+}
+
+section.carousel-section h1 {
+  font-size: 3rem;
+}
+
+section.carousel-section .carousel-item {
+  margin-top: -5rem;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.container .row {
+  -webkit-box-shadow: 3px 3px 0 black;
+  box-shadow: 3px 3px 0 black;
+}
+
+.container .col {
+  -webkit-box-shadow: 5px 5px 0 black;
+  box-shadow: 5px 5px 0 black;
+}
+
+.box {
+  border-radius: 1rem;
+  width: auto;
+  border: 2px solid black;
+  margin: 1rem auto;
+}
+/*# sourceMappingURL=style.css.map */

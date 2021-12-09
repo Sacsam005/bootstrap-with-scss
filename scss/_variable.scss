@@ -1,0 +1,17 @@
+$mainFont: Arial;
+$mainColor: black;
+$fontColor: white;
+$fontSize: 1rem;
+$mainPadding: 1rem;
+$mainMargin: 0 auto;
+$mainHeading: 3rem;
+
+%alignment {
+  margin: $mainPadding;
+  text-align: center;
+}
+
+%justify {
+  justify-content: center;
+  align-items: center;
+}
