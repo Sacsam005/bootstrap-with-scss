@@ -11,7 +11,16 @@
 * Functions
   * Math functions
   * String functions
-
+  * Color functions
+  * List functions
+  * Selector functions
+  * Map functions
+  * Introspection functions
+* Loops 
+  * @If else
+  * @For
+  * @each
+  * @while
 
 
 Operations in SASS  | Functions in SASS
