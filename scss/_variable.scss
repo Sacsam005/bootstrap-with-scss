@@ -5,6 +5,8 @@ $fontSize: 1rem;
 $mainPadding: 1rem;
 $mainMargin: 0 auto;
 $mainHeading: 3rem;
+$baseColor: gold;
+$carousel-control-color: red;
 
 %alignment {
   margin: $mainPadding;
@@ -14,4 +16,5 @@ $mainHeading: 3rem;
 %justify {
   justify-content: center;
   align-items: center;
+  align-content: center;
 }

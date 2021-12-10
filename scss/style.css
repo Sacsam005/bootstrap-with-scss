@@ -1,12 +1,16 @@
-.container, .container .row, .container .col {
+.container, .container .row, .container .col, div.box-1,
+div.box-2 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.container, .container .row, .container .col, div.box-1,
+div.box-2 {
   margin: 1rem;
   text-align: center;
 }
 
 @media screen and (max-width: 576px) {
-  button.navbar-toggler {
-    color: white;
-  }
   .navbar-toggler-icon {
     color: white;
   }
@@ -17,6 +21,15 @@
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     margin: 0 auto;
+  }
+  .container-fluid {
+    width: 100%;
+    display: block;
+  }
+  div.box-1,
+  div.box-2 {
+    width: 60%;
+    margin: 1.5rem auto;
   }
 }
 
@@ -95,5 +108,41 @@ section.carousel-section .carousel-item {
   width: auto;
   border: 2px solid black;
   margin: 1rem auto;
+}
+
+.container-fluid {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+div.box-1,
+div.box-2 {
+  width: 400px;
+  height: 100px;
+  border: 2px solid pink;
+  -webkit-box-shadow: 5px 5px 0 black;
+  box-shadow: 5px 5px 0 black;
+  margin: 0 auto;
+}
+
+div.box-1 {
+  background: #998100;
+  background: gold;
+  background: #ff8100;
+  -webkit-border-radius: 1rem;
+  -moz-radius: 1rem;
+}
+
+div.box-2 {
+  background: #ffe766;
+  background: #28ff00;
+  -webkit-border-radius: 1rem;
+  -moz-radius: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

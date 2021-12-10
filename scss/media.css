@@ -1,27 +1,23 @@
 @media screen and (max-width: 576px) {
-  button.navbar-toggler {
-    color: white;
-  }
-  .navbar-toggler-icon {
-    color: white;
+  span.navbar-brand {
+    margin: 0 auto;
   }
   .container {
     width: 100%;
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
-    grid-template-rows: 1fr;
+        grid-template-rows: 1fr;
     margin: 0 auto;
   }
-
-  section.carousel-section {
+  .container-fluid {
     width: 100%;
-    height: auto;
+    display: block;
   }
-
-  section.carousel-section h1 {
-    font-size: 1.5rem;
-    text-align: center;
+  div.box-1,
+  div.box-2 {
+    width: 60%;
+    margin: 1.5rem auto;
   }
 }
 /*# sourceMappingURL=media.css.map */

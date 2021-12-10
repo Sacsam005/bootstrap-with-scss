@@ -1,0 +1,303 @@
+.abc {
+  padding: false;
+  margin: 10px;
+}
+
+.test {
+  padding: 5px;
+  padding: 0px;
+  font-size: 2px;
+}
+
+.test h1 {
+  font-size: 20px;
+}
+
+.test {
+  margin-bottom: 10px;
+}
+
+.icon-duck {
+  background-image: url("/icons/duck.png");
+}
+
+.half-div {
+  width: 500px;
+}
+
+.semi-div {
+  width: 125px;
+}
+
+.quarter-div {
+  width: 250px;
+}
+
+test {
+  font-family: arial;
+  font-family: 5;
+  font-family: "ria";
+  font-family: 2;
+  font-family: "Arial mono";
+  font-family: ue0426df7;
+}
+
+.test {
+  padding: 1.5rem;
+  padding: 1rem, 2rem, 2rem;
+  padding: 1rem, 1.5rem, 3rem;
+  font-family: "Mono" "Serif" "Sans-serif";
+  padding: 1rem, 1.5rem, 2rem, 3rem, 6rem, 9rem;
+  padding: 1, 2, 3, 4, 5;
+  padding: 1 2 3 4 5;
+  padding: 1rem, 1.5rem, 2rem, 5rem;
+  padding: 1rem 1.5rem 2rem 5rem;
+  padding: 1rem 3rem, 1.5rem 6rem, 2rem 9rem;
+  padding: red 1rem 3rem, green 1.5rem 6rem, blue 2rem 9rem;
+  padding: 3;
+  padding: comma;
+  padding: false;
+}
+
+ul main a, main ul a {
+  color: orange;
+}
+
+ul li a:hover {
+  color: orange;
+}
+
+.abc_copy, .abc_image {
+  color: orange;
+}
+
+a.link {
+  color: orange;
+}
+
+.test {
+  font-weight: 900;
+  font-weight: "small", "bolder", "bold", "boldest";
+  font-weight: 400, 500, 700, 900;
+  font-weight: "small", "bolder", "bold", "boldest", "med", "large", "x-large";
+  font-weight: 1rem, 500, 700, 900, 2rem, 3rem, 5rem;
+  font-weight: 500, 700, 900;
+  font-weight: "bolder" 500;
+}
+
+.test {
+  padding: true;
+  padding: false;
+  padding: true;
+  padding: true;
+  padding: false;
+  padding: true;
+  padding: false;
+  padding: number;
+  padding: string;
+  padding: list;
+  padding: "Arial";
+  padding: "Arial";
+  padding: 1rem, 1.5rem, 2rem;
+}
+
+.abc {
+  -webkit-border-radius: 1rem;
+  -moz-radius: 1rem;
+  border-radius: 2rem;
+  border-color: red;
+}
+
+.block {
+  color: gray;
+}
+
+#menu .block {
+  color: gray;
+  background-color: greenyellow;
+  padding: 1rem;
+}
+
+.button {
+  border: 1px solid red;
+}
+
+.button:hover {
+  border-width: 3px;
+  border-bottom: 1px;
+}
+
+body {
+  background-color: grey;
+}
+
+@media screen and (max-width: 1300px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: green;
+  }
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 500px;
+  }
+}
+
+.item {
+  color: red;
+}
+
+.item-wrapper {
+  color: green;
+}
+
+.item-wrapper img {
+  width: auto;
+}
+
+.item-child {
+  background-color: greenyellow;
+}
+
+@media print {
+  .container {
+    color: red;
+  }
+}
+
+.container {
+  color: green;
+  font-size: 2rem;
+}
+
+p {
+  color: blue;
+  font-size: 3rem;
+  font-size: 3rem;
+}
+
+p else {
+  color: greenyellow;
+}
+
+p {
+  color: greenyellow;
+}
+
+.test {
+  font-size: 20;
+  color: black;
+}
+
+.box {
+  background-color: blue;
+}
+
+.list-1 {
+  width: 100px;
+  background-color: #ff5a77;
+}
+
+.list-2 {
+  width: 50px;
+  background-color: #f3002a;
+}
+
+.list-3 {
+  width: 33.33333px;
+  background-color: #8d0019;
+}
+
+.style-1 {
+  width: 100px;
+  background-color: #ff5a77;
+}
+
+.style-2 {
+  width: 50px;
+  background-color: #f3002a;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-weight: italic;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.normal {
+  font-weight: italic;
+  font-size: italic;
+}
+
+.emphasis {
+  font-weight: italic;
+  font-size: italic;
+}
+
+.bold {
+  font-weight: italic;
+  font-size: italic;
+}
+
+.normal {
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.medium {
+  font-size: 2rem;
+  font-style: medium;
+}
+
+.large {
+  font-size: 3rem;
+  font-style: large;
+}
+
+.pad-10 {
+  padding-left: 10rem;
+}
+
+.pad-20 {
+  padding-left: 20rem;
+}
+
+.pad-30 {
+  padding-left: 30rem;
+}
+/*# sourceMappingURL=operator.css.map */

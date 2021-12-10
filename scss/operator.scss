@@ -1,0 +1,434 @@
+// ROUGH PRACTICE for SASS SKILLS
+
+// Operators in SASS
+$val1: 10;
+$val2: 2;
+
+.abc {
+  padding: arial == "arial" and 10px==20px;
+  margin: 10 + px;
+}
+
+.test {
+  padding: ($val1 / $val2) + px;
+  padding: ($val1 % $val2) + px;
+  font-size: $val2 + px;
+}
+
+.test h1 {
+  font-size: $val1 * 2 + px;
+}
+
+// Interpolation in Sass
+@mixin margin($position, $unit) {
+  margin-#{$position}: $unit + px;
+}
+
+.test {
+  @include margin(bottom, 10);
+}
+
+@mixin set-icon($name) {
+  .icon-#{$name} {
+    background-image: url("/icons/#{$name}.png");
+  }
+}
+
+@include set-icon(duck);
+
+// Functions in Sass
+$container-width: 1000;
+
+@function half-div($width) {
+  @return $width/2 + px;
+}
+
+@function semi-div($width) {
+  @return $width/8 + px;
+}
+
+@function quarter-div($width) {
+  @return $width/4 + px;
+}
+
+.half-div {
+  width: half-div($container-width);
+}
+
+.semi-div {
+  width: semi-div($container-width);
+}
+
+.quarter-div {
+  width: quarter-div($container-width);
+}
+
+// String functions in SASS
+test {
+  font-family: to-lower-case(Arial);
+  font-family: str-length(Arial);
+  font-family: str-slice("Arial", 2, 4);
+  font-family: str-index("Arial", "ria");
+  font-family: str-insert("Arial", " mono", 7);
+  font-family: unique-id();
+}
+
+// List functions in SASS
+$list: 1rem, 1.5rem, 2rem;
+$list2: 3rem, 6rem, 9rem;
+
+.test {
+  // padding: length(
+  //   (
+  //     width: 2rem,
+  //     height: 1/5rem,
+  //   )
+  // );
+  // padding: nth([list1, list2, list3], -1);
+
+  padding: nth($list, 2);
+  padding: set-nth($list, 2, 2rem);
+  padding: set-nth($list, 3, 3rem);
+  font-family: set-nth("Arial" "Serif" "Sans-serif", 1, "Mono");
+
+  padding: join($list, $list2);
+  padding: join((1, 2, 3), (4 5));
+  padding: join((1, 2, 3), (4 5), space);
+
+  padding: append($list, 5rem);
+  padding: append($list, 5rem, space);
+
+  padding: zip($list, $list2);
+
+  padding: zip((red, green, blue), $list, $list2);
+
+  padding: index($list, 2rem);
+
+  padding: list-separator($list);
+  padding: is-bracketed($list);
+}
+
+// Selector functions in SASS
+// makes ul parent of li
+$selector: selector-nest("ul", "li", "a", "&:hover");
+$sel: selector-unify("ul a", "main a");
+
+$select: selector-append(".abc", "_copy, _image");
+$selection: selector-replace("a.abc", ".abc", ".link");
+
+#{$sel} {
+  color: orange;
+}
+
+#{$selector} {
+  color: orange;
+}
+
+#{$select} {
+  color: orange;
+}
+
+#{$selection} {
+  color: orange;
+}
+
+// Map functions in SASS
+$font-weights: (
+  "small": 400,
+  "bolder": 500,
+  "bold": 700,
+  "boldest": 900,
+);
+
+$font-size: (
+  "small": 1rem,
+  "med": 2rem,
+  "large": 3rem,
+  "x-large": 5rem,
+);
+
+$map-merge: map-merge($font-weights, $font-size);
+
+$map-remove: map-remove($font-weights, "small");
+
+.test {
+  font-weight: map-get($font-weights, "boldest");
+  font-weight: map-keys($font-weights);
+  font-weight: map-values($font-weights);
+  font-weight: map-keys($map-merge);
+  font-weight: map-values($map-merge);
+  font-weight: map-values($map-remove);
+  font-weight: nth($font-weights, 2);
+}
+
+// Introspections functions in SASS
+$num: 1rem;
+
+.test {
+  $char: "Arial";
+  padding: variable-exists(char);
+  padding: global-variable-exists(char);
+  padding: variable-exists(num);
+  padding: mixin-exists(margin);
+  padding: mixin-exists(width);
+  padding: function-exists(half-div);
+  padding: function-exists(full-div);
+  padding: type-of($num);
+  padding: type-of($char);
+  padding: type-of($list);
+  padding: inspect($char);
+  padding: inspect($char);
+  padding: inspect($list);
+}
+
+// Content Directive in SASS
+@mixin bd-radius {
+  -webkit-border-radius: 1rem;
+  -moz-radius: 1rem;
+  border-radius: 2rem;
+  @content;
+}
+
+.abc {
+  @include bd-radius();
+  border-color: red;
+}
+
+@mixin test {
+  @content;
+}
+
+@include test {
+  .block {
+    color: gray;
+  }
+}
+
+@mixin test {
+  #menu {
+    @content;
+  }
+}
+
+@include test {
+  .block {
+    color: gray;
+    background-color: greenyellow;
+    padding: 1rem;
+  }
+}
+
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+.button {
+  border: 1px solid red;
+
+  @include hover {
+    border-width: 3px;
+    border-bottom: 1px;
+  }
+}
+
+body {
+  background-color: grey;
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@include media(1300px) {
+  body {
+    background-color: red;
+  }
+}
+
+@include media(1000px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@include media(700px) {
+  body {
+    background-color: green;
+  }
+}
+
+// Media Queries in SASS
+.container {
+  width: 1100px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1150px) {
+    width: 900px;
+  }
+
+  @media screen and (max-width: 950px) {
+    width: 700px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 500px;
+  }
+}
+
+.item {
+  color: red;
+
+  @at-root {
+    .item-wrapper {
+      color: green;
+
+      img {
+        width: auto;
+      }
+    }
+
+    .item-child {
+      background-color: greenyellow;
+    }
+  }
+}
+
+@media print {
+  .container {
+    color: red;
+
+    @at-root (without: media) {
+      color: green;
+      font-size: 2rem;
+    }
+  }
+}
+
+// Loops in SASS
+// if and else loop
+$test: 3;
+
+// if
+p {
+  @if $test < 5 {
+    color: blue;
+  }
+  @if 1+2 !=2 {
+    font-size: 3rem;
+  }
+  @if 10==9 {
+    background-color: red;
+  }
+  font-size: 3rem;
+}
+
+// if else
+p {
+  @if $test>=5 {
+    color: red;
+  }
+  else {
+    color: greenyellow;
+  }
+}
+
+// if ,else if, else
+p {
+  @if $test>=10 and $test<=5 {
+    color: red;
+  } @else if $test <=5 and $test >=1 {
+    color: greenyellow;
+  } @else {
+    color: orange;
+  }
+}
+
+// loop with mixin
+@mixin changeColor($value) {
+  font-size: $value;
+  @if $value >0 and $value < 5 {
+    color: green;
+  } @else if $value >5 and $value < 10 {
+    color: blue;
+  } @else {
+    color: black;
+  }
+}
+
+.test {
+  @include changeColor(20);
+}
+
+// loop using mixin in SASS
+@mixin box($value) {
+  @if $value==dark {
+    background-color: darkblue;
+  } @else if $value==light {
+    background-color: lightblue;
+  } @else {
+    background-color: blue;
+  }
+}
+
+.box {
+  @include box(0);
+}
+
+// @for directives in SASS
+@for $i from 1 through 3 {
+  .list-#{$i} {
+    width: 100px / $i;
+    background-color: darken(pink, $i * 20%);
+  }
+}
+
+@for $j from 1 to 3 {
+  .style-#{$j} {
+    width: 100px / $j;
+    background-color: darken(pink, $j * 20%);
+  }
+}
+
+// @for each directives in SASS
+@each $i in (bold, italic, bolder) {
+  .#{$i} {
+    font-weight: $i;
+  }
+}
+
+$list: ((normal, italic, 400), (emphasis, italic, 600), (bold, italic, 900));
+@each $name, $style, $size in $list {
+  .#{$name} {
+    font-weight: $style;
+    font-size: $style;
+  }
+}
+
+$map: (
+  (
+    normal: 1rem,
+    medium: 2rem,
+    large: 3rem,
+  )
+);
+
+@each $font-style, $font-size in $map {
+  .#{$font-style} {
+    font-size: $font-size;
+    font-style: $font-style;
+  }
+}
+
+// @while directive
+
+$i: 10;
+@while $i <=30 {
+  .pad-#{$i} {
+    padding-left: 1rem * $i;
+  }
+  $i: $i + 10;
+}

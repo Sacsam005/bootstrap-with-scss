@@ -1,10 +1,9 @@
-@media screen and (max-width: 576px) {
-  button.navbar-toggler {
-    color: white;
-  }
+@import "variable";
+@import "mixins";
 
-  .navbar-toggler-icon {
-    color: white;
+@media screen and (max-width: 576px) {
+  span.navbar-brand {
+    margin: 0 auto;
   }
 
   .container {
@@ -14,5 +13,14 @@
     margin: 0 auto;
   }
 
-  
+  .container-fluid {
+    width: 100%;
+    display: block;
+  }
+
+  div.box-1,
+  div.box-2 {
+    width: 60%;
+    margin: 1.5rem auto;
+  }
 }
